@@ -3,6 +3,7 @@ import 'package:mohib_frontend/images.dart';
 import 'package:mohib_frontend/listtile_demo.dart';
 import 'package:mohib_frontend/nested_row_column.dart';
 import 'package:mohib_frontend/row_column.dart';
+import 'package:mohib_frontend/single_selection.dart';
 
 import 'appBar.dart';
 
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ListtileDemo(),
+      home: SingleSelection(),
     );
   }
 }
