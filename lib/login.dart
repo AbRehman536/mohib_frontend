@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   const Login({super.key});
 
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  TextEditingController emailController= TextEditingController();
+  TextEditingController passwordController= TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,6 +23,7 @@ class Login extends StatelessWidget {
         child: Column(children: [
           Text("Login"),
           TextField(
+            controller: emailController,
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
               fillColor: Colors.grey,
@@ -32,6 +40,7 @@ class Login extends StatelessWidget {
           ),
           SizedBox(height: 10,),
           TextField(
+            controller: passwordController,
             keyboardType: TextInputType.phone,
             decoration: InputDecoration(
               fillColor: Colors.grey,
@@ -45,7 +54,23 @@ class Login extends StatelessWidget {
                   borderSide: BorderSide.none
               )
           ),),
-          ElevatedButton(onPressed: () {  }, child: Text("Login"),),
+          ElevatedButton(onPressed: () {
+            if(emailController.text.isEmpty){
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text("Email is Empty")));
+              return;
+            }
+            if(passwordController.text.isEmpty){
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text("Password is Empty")));
+              return;
+            }
+            if(passwordController.text.length < 8){
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text("Password should be more than 8 digits")));
+              return;
+            }
+          }, child: Text("Login"),),
           TextButton(onPressed: (){}, child: Text("Sign Up"))
         ],),
       ),
