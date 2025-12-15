@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mohib_frontend/dialog_box.dart';
 import 'package:mohib_frontend/images.dart';
 import 'package:mohib_frontend/listtile_demo.dart';
 import 'package:mohib_frontend/login.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Login(),
+      home: DialogBoxDemo(),
     );
   }
 }
