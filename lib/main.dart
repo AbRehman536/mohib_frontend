@@ -7,6 +7,7 @@ import 'package:mohib_frontend/multi_selection.dart';
 import 'package:mohib_frontend/nested_row_column.dart';
 import 'package:mohib_frontend/row_column.dart';
 import 'package:mohib_frontend/single_selection.dart';
+import 'package:mohib_frontend/tab_bar.dart';
 
 import 'appBar.dart';
 
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: DialogBoxDemo(),
+      home: TabBarDemo(),
     );
   }
 }
