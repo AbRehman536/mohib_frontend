@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mohib_frontend/bottom_bar.dart';
 import 'package:mohib_frontend/dialog_box.dart';
+import 'package:mohib_frontend/gridview/grid_view_fixed.dart';
+import 'package:mohib_frontend/gridview/grid_view_fmax.dart';
+import 'package:mohib_frontend/gridview/gridview_count.dart';
 import 'package:mohib_frontend/images.dart';
 import 'package:mohib_frontend/listtile_demo.dart';
 import 'package:mohib_frontend/login.dart';
@@ -42,7 +45,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: BottomBarDemo(),
+      home: GridViewMax(),
     );
   }
 }
