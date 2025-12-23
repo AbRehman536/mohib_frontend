@@ -7,6 +7,7 @@ import 'package:mohib_frontend/gridview/gridview_count.dart';
 import 'package:mohib_frontend/images.dart';
 import 'package:mohib_frontend/listtile_demo.dart';
 import 'package:mohib_frontend/login.dart';
+import 'package:mohib_frontend/menu.dart';
 import 'package:mohib_frontend/multi_selection.dart';
 import 'package:mohib_frontend/nested_row_column.dart';
 import 'package:mohib_frontend/row_column.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -45,7 +47,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: GridViewMax(),
+      home: MenuDemo(),
     );
   }
 }
