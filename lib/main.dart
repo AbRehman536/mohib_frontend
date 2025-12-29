@@ -10,6 +10,7 @@ import 'package:mohib_frontend/login.dart';
 import 'package:mohib_frontend/menu.dart';
 import 'package:mohib_frontend/multi_selection.dart';
 import 'package:mohib_frontend/nested_row_column.dart';
+import 'package:mohib_frontend/pageview.dart';
 import 'package:mohib_frontend/row_column.dart';
 import 'package:mohib_frontend/single_selection.dart';
 import 'package:mohib_frontend/tab_bar.dart';
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: MenuDemo(),
+      home: PageViewDemo(),
     );
   }
 }
