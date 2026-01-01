@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mohib_frontend/bottom_bar.dart';
 import 'package:mohib_frontend/date_time_picker.dart';
 import 'package:mohib_frontend/dialog_box.dart';
+import 'package:mohib_frontend/google_map.dart';
 import 'package:mohib_frontend/gridview/grid_view_fixed.dart';
 import 'package:mohib_frontend/gridview/grid_view_fmax.dart';
 import 'package:mohib_frontend/gridview/gridview_count.dart';
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Settings(),
+      home: GoogleMapDemo(),
     );
   }
 }
