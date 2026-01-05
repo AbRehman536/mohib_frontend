@@ -13,6 +13,7 @@ import 'package:mohib_frontend/menu.dart';
 import 'package:mohib_frontend/multi_selection.dart';
 import 'package:mohib_frontend/nested_row_column.dart';
 import 'package:mohib_frontend/pageview.dart';
+import 'package:mohib_frontend/passing%20parameters/screen_1.dart';
 import 'package:mohib_frontend/row_column.dart';
 import 'package:mohib_frontend/settings.dart';
 import 'package:mohib_frontend/single_selection.dart';
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: GoogleMapDemo(),
+      home: Screen1(),
     );
   }
 }
