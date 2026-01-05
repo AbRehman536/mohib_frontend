@@ -14,7 +14,7 @@ class Screen2 extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text(name.toString(),style: TextStyle(fontSize: 30),),
+          Text(name.toString(),style: TextStyle(fontSize: 20),),
           Text(email.toString(),style: TextStyle(fontSize: 30),),
           ElevatedButton(onPressed: (){
             Navigator.pop(context);
