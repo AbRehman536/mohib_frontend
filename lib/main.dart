@@ -14,15 +14,21 @@ import 'package:mohib_frontend/multi_selection.dart';
 import 'package:mohib_frontend/nested_row_column.dart';
 import 'package:mohib_frontend/pageview.dart';
 import 'package:mohib_frontend/passing%20parameters/screen_1.dart';
+import 'package:mohib_frontend/provider/screen_a.dart';
+import 'package:mohib_frontend/provider/user_provider.dart';
 import 'package:mohib_frontend/row_column.dart';
 import 'package:mohib_frontend/settings.dart';
 import 'package:mohib_frontend/single_selection.dart';
 import 'package:mohib_frontend/tab_bar.dart';
+import 'package:provider/provider.dart';
 
 import 'appBar.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(create: (context)=> UserProvider()),
+  ],
+  child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -52,7 +58,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Screen1(),
+      home: ScreenA(),
     );
   }
 }
